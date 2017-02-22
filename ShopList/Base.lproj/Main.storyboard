@@ -149,6 +149,7 @@
                                     <constraint firstAttribute="height" constant="30" id="Pwi-oZ-p20"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="18"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Apply"/>
                                 <connections>
                                     <action selector="applyListName:" destination="zTn-gX-SAs" eventType="touchUpInside" id="Uq4-Hw-ciS"/>
@@ -163,7 +164,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pnl-U3-eSA">
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pnl-U3-eSA">
                                 <rect key="frame" x="0.0" y="145" width="375" height="446"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Items" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6AK-bO-Cnp">
@@ -194,6 +195,7 @@
                                                         <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="oyh-jB-AGY">
                                                             <rect key="frame" x="244" y="50" width="94" height="29"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <connections>
                                                                 <action selector="qtyChanged:" destination="g0s-Pn-NBG" eventType="valueChanged" id="mLZ-hL-h38"/>
                                                             </connections>
@@ -223,7 +225,9 @@
                                                                 <constraint firstAttribute="height" constant="30" id="DVL-Rp-c1K"/>
                                                             </constraints>
                                                             <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
-                                                            <state key="normal" title="Update name"/>
+                                                            <state key="normal" title="Update name">
+                                                                <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </state>
                                                             <connections>
                                                                 <action selector="updateName:" destination="g0s-Pn-NBG" eventType="touchUpInside" id="zyX-oA-Yww"/>
                                                             </connections>
@@ -251,6 +255,7 @@
                                             <constraint firstAttribute="width" constant="50" id="qoi-B6-yLc"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Add"/>
                                         <connections>
                                             <action selector="addPressed:" destination="zTn-gX-SAs" eventType="touchUpInside" id="dEi-xI-Vns"/>
@@ -275,6 +280,7 @@
                                     <constraint firstAttribute="height" constant="60" id="BLY-I9-s6I"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="25"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Reset"/>
                                 <connections>
                                     <action selector="resetPressed:" destination="zTn-gX-SAs" eventType="touchUpInside" id="rk8-8h-Fwe"/>

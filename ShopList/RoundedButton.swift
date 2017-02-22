@@ -1,10 +1,10 @@
 //
 //  RoundedButton.swift
 //  ShopList
-//
+//  300907406
 //  Created by Serhii Pianykh on 2017-02-21.
 //  Copyright © 2017 Serhii Pianykh. All rights reserved.
-//
+//  Button extension which allows to control corner radius
 
 import UIKit
 

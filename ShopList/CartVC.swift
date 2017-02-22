@@ -1,10 +1,10 @@
 //
 //  CartVC.swift
 //  ShopList
-//
+//  300907406
 //  Created by Serhii Pianykh on 2017-02-21.
 //  Copyright © 2017 Serhii Pianykh. All rights reserved.
-//
+//  View Controller for main view with list items
 
 import UIKit
 
@@ -33,18 +33,17 @@ class CartVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         //assigning current user to his storage
         userRef = storageRef.child((FIRAuth.auth()?.currentUser?.uid)!)
         listRef = userRef?.child("list")
-        userRef!.observeSingleEvent(of: .value, with: { snapshot in
+        userRef?.observe(.value, with: { snapshot in
             if !snapshot.exists() {
                 return
             }
             if let name = snapshot.childSnapshot(forPath: "listName").value as? String {
                 self.listName = name
+                 self.showListName(name: self.listName!)
             }
         })
+        
 
-        if listName != nil {
-            showListName(name: listName!)
-        }
         listRef?.queryOrdered(byChild: "name").observe(.value, with: { snapshot in
             var newItems = [ListItem]()
             for item in snapshot.children {
