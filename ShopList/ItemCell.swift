@@ -8,17 +8,39 @@
 
 import UIKit
 
-class ItemCell: UITableViewCell {
+class ItemCell: UITableViewCell, UITextFieldDelegate {
+    
+    //closures for cell actions
+    var nameChangedAction: ((UITableViewCell) -> Void)?
+    var qtyChangedAction: ((UITableViewCell) -> Void)?
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    
+    @IBOutlet weak var nameField: UITextField!
+    @IBOutlet weak var qtyLabel: UILabel!
+    @IBOutlet weak var stepper: UIStepper!
+    
+    func configureCell(item: ListItem) {
+        nameField.text = item.name
+        qtyLabel.text = "Qty: \(item.qty!)"
+        stepper.value = Double(item.qty)
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    
+    @IBAction func updateName(_ sender: Any) {
+        nameChangedAction!(self)
     }
 
+    func changeQty(item: ListItem) {
+        item.qty = Int(stepper.value)
+        item.ref?.updateChildValues(item.toAnyObject() as! [AnyHashable : Any])
+    }
+    
+    @IBAction func qtyChanged(_ sender: Any) {
+        qtyChangedAction!(self)
+    }
+    
+    func changeName(item: ListItem) {
+        item.name = nameField.text!
+        item.ref?.updateChildValues(item.toAnyObject() as! [AnyHashable : Any])
+    }
 }

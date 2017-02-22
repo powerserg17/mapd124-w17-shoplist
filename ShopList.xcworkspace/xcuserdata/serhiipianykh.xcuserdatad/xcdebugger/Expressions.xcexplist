@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "LoginVC.(loginPressed(UIButton) -&gt; ()).(closure #1):LoginVC.swift">
+      </ContextState>
+      <ContextState
+         contextName = "CartVC.viewDidLoad() -&gt; ():CartVC.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "userRef">
+            </PersistentString>
+            <PersistentString
+               value = "listName">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>
